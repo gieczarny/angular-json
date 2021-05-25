@@ -1,0 +1,35 @@
+h2 {
+  text-align: center;
+  margin-top: 4vh;
+  animation: post-load 300ms ease-in;
+
+  img {
+    width: 60px;
+  }
+
+}
+
+form {
+  width: 80vw;
+  margin: auto;
+  animation: post-load 300ms ease-in;
+
+  textarea {
+    min-height: 28vh;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 3vh;
+  }
+
+  label {
+    margin: 2vh 0px;
+  }
+
+  .btn {
+    margin-left: 65vw;
+    margin-bottom: 5vh;
+    padding: 10px 20px;
+  }
+}
