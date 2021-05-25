@@ -1,7 +1,15 @@
+// #top {
+//   border-bottom: solid 5px coral;
+// }
+
 .navbar-brand,
 .nav-item {
-  margin: 10px;
+  margin: 35px;
   color: #000000;
+}
+
+#navbarSupportedContent {
+  font-size: 20px;
 }
 
 .navbar-brand:hover {
@@ -9,14 +17,16 @@
 }
 
 img {
-  width: 70px;
-  margin: 5px;
+  width: 65px;
+  margin: 10px;
 }
 
 #github{
-  margin: 30px;
+  margin: 10px;
   font-size: 1.80em;
   color: black;
+  padding-bottom: 0em;
 }
+
 
 
