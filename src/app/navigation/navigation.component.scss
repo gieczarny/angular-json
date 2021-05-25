@@ -4,12 +4,13 @@
 
 .navbar-brand,
 .nav-item {
-  margin: 35px;
+  margin: 15px;
   color: #000000;
 }
 
 #navbarSupportedContent {
   font-size: 20px;
+  font-weight: bold;
 }
 
 .navbar-brand:hover {
@@ -19,13 +20,6 @@
 img {
   width: 65px;
   margin: 10px;
-}
-
-#github{
-  margin: 10px;
-  font-size: 1.80em;
-  color: black;
-  padding-bottom: 0em;
 }
 
 
