@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AddPostComponent } from './add-post/add-post.component';
     NavigationComponent,
     FooterComponent,
     ErrorPageComponent,
-    AddPostComponent
+    AddPostComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
