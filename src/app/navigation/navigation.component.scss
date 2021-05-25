@@ -4,22 +4,19 @@
   color: #000000;
 }
 
-
 .navbar-brand:hover {
   color: #A9A9A9;
-
-  img {
-    filter: brightness(110%);
-  }
 }
 
 img {
   width: 70px;
   margin: 5px;
+}
 
-  &:hover {
-    filter: brightness(110%);
-  }
+#github{
+  margin: 30px;
+  font-size: 1.80em;
+  color: black;
 }
 
 
