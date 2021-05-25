@@ -1,0 +1,31 @@
+
+<h2>
+  Edit post {{postId}}
+</h2>
+<form (ngSubmit)="onEditItem(postForm)" #postForm="ngForm">
+  <div class="form-group">
+      <label for="title">Post title:</label>
+      <input
+          name="title"
+          type="text"
+          class="form-control"
+          id="title"
+          maxlength="100"
+          ngModel = {{postTitle}}
+          />
+      </div>
+  <div class="form-group">
+      <label for="postPost">Post:</label>
+      <textarea
+          id="postText"
+          type="postText"
+          class="form-control"
+          name="postText"
+          ngModel = {{postText}}
+          ></textarea>
+  </div>
+  <div class="buttonsContainer">
+      <button type="submit" class="btn btn-info">CONFIRM</button>
+      <button type="button" class="btn btn-danger" (click)="onCancel()">CANCEL</button>
+  </div>
+</form>
