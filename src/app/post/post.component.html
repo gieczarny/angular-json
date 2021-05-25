@@ -1,1 +1,23 @@
-<p>post works!</p>
+<div class="post">
+  <div class="post-info-container">
+      <h3>
+          {{element.title}}
+          <div class="button-container">
+              <button class="btn btn-info" (click)="editPost()">Edit</button>
+              <div class="popup" (click)="confirmPostRemoval()">
+                  <button class="btn btn-danger">Delete</button>
+                  <span class="popuptext myPopup">
+                      Remove the post?
+                      <div class="popup-button-container">
+                          <button class="btn btn-info" (click)="deletePost()">YES</button>
+                          <button class="btn btn-danger" style="margin-left: 15px">NO</button>
+                      </div>
+                  </span>
+              </div>
+          </div>
+      </h3>
+  </div>
+  <p>{{element.text}}</p>
+  <hr>
+</div>
+
