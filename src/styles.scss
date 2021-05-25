@@ -1,10 +1,9 @@
 html,
 body {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   position: relative;
-  min-height: 100vh;
+
 }
 
 @media (min-width: 900px) {
@@ -13,25 +12,10 @@ body {
     padding: 16px;
     border-top: 8px solid #FFC371;
     border-bottom: 8px solid #FF5F6D;
-    background-image: linear-gradient(#FFC371, #FF5F6D), linear-gradient(#FFC371, #FF5F6D) !important;
-    background-size: 8px 100% !important;
-    background-position: 0 0, 100% 0 !important;
-    background-repeat: no-repeat !important;
+    background-image: linear-gradient(#FFC371, #FF5F6D), linear-gradient(#FFC371, #FF5F6D);
+    background-size: 8px 100%;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
     overflow-y: hidden;
   }
 }
-
-@keyframes post-load {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
