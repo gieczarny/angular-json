@@ -1,21 +1,19 @@
 html,
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   position: relative;
-
+  min-height: 100vh;
 }
 
 @media (min-width: 900px) {
   body {
-    min-height: 100vh;
-    padding: 16px;
     border-top: 8px solid #FFC371;
     border-bottom: 8px solid #FF5F6D;
     background-image: linear-gradient(#FFC371, #FF5F6D), linear-gradient(#FFC371, #FF5F6D);
     background-size: 8px 100%;
     background-position: 0 0, 100% 0;
     background-repeat: no-repeat;
-    overflow-y: hidden;
   }
 }
