@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     FooterComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
