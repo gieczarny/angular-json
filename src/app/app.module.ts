@@ -11,7 +11,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { PostComponent } from './post/post.component';
 import { CommentsComponent } from './comments/comments.component';
-import { PostsComponent } from './posts/posts.component';
+import { MyPostsComponent } from './my-posts/my-posts.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
@@ -23,14 +23,13 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     AddPostComponent,
     PostComponent,
     CommentsComponent,
-    PostsComponent,
+    MyPostsComponent,
     EditPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
