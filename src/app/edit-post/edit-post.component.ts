@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import axios from 'axios';
-import { title } from 'process';
 
 @Component({
   selector: 'app-edit-post',
@@ -13,8 +12,11 @@ export class EditPostComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
   public postId: string;
+  public postName: string;
+  public postCountry: string;
   public postText: string;
-  public postTitle: string;
+
+
 
   ngOnInit(): void {
     this.postId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -22,7 +24,8 @@ export class EditPostComponent implements OnInit {
     axios
       .get('http://localhost:3000/posts/' + this.postId)
       .then(response => {
-        this.postTitle = response.data.title;
+        this.postName = response.data.name;
+        this.postCountry = response.data.country;
         this.postText = response.data.text;
       }
       );
@@ -34,7 +37,7 @@ export class EditPostComponent implements OnInit {
       method: 'PUT',
       url: 'http://localhost:3000/posts/' + this.postId,
       headers: { 'Content-Type': 'application/json' },
-      data: { "title": form.value.title, "text": form.value.postText }
+      data: { "name": form.value.name, "country": form.value.postCountry, "text": form.value.postText }
     });
     this.router.navigate(['/comments', this.postId]);
   }

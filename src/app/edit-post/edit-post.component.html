@@ -4,18 +4,29 @@
 </h2>
 <form (ngSubmit)="onEditItem(postForm)" #postForm="ngForm">
   <div class="form-group">
-      <label for="title">Post title:</label>
+      <label for="postName">Name:</label>
       <input
-          name="title"
-          type="text"
+          id="postName"
+          name="postName"
+          type="postName"
           class="form-control"
-          id="title"
           maxlength="100"
-          ngModel = {{postTitle}}
+          ngModel = {{postName}}
           />
       </div>
   <div class="form-group">
-      <label for="postPost">Post:</label>
+       <label for="Country">Country:</label>
+        <input
+          id="postCountry"
+          name="postCountry"
+          type="postCountry"
+          class="form-control"
+          maxlength="100"
+          ngModel = {{postCountry}}
+          />
+    </div>
+  <div class="form-group">
+      <label for="postPost"></label>
       <textarea
           id="postText"
           type="postText"
