@@ -20,7 +20,7 @@ export class AddPostComponent implements OnInit {
   onAddItem(form: NgForm) {
       axios
         .post('http://localhost:3000/posts', {
-          "title": form.value.title, "post": form.value.postText
+          "name": form.value.name, "country": form.value.postCountry, "text": form.value.postText
         });
       this.router.navigate(['/comments']);
     }

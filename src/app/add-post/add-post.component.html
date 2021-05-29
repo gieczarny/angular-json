@@ -2,25 +2,37 @@
 <h2>Add a new post</h2>
 <form (ngSubmit)="onAddItem(postForm)" #postForm="ngForm">
   <div class="form-group">
-      <label for="title">Post title:</label>
+      <label for="name">Add name and surname of famous:</label>
       <input
-          name="title"
-          type="text"
+          name="name"
+          type="name"
           class="form-control"
-          id="title"
-          placeholder="Enter title of post"
+          id="name"
+          placeholder="Add name and surname"
           maxlength="100"
           ngModel
           />
       </div>
   <div class="form-group">
-      <label for="postText">Post:</label>
+      <label for="postCountry">Where it comes from?</label>
+      <input
+          name="postCountry"
+          type="postCountry"
+          class="form-control"
+          id="postCountry"
+          placeholder="Add country"
+          maxlength="30"
+          ngModel
+          />
+      </div>
+  <div class="form-group">
+      <label for="postText">Biography:</label>
       <textarea
           id="postText"
           type="postText"
           class="form-control"
           name="postText"
-          placeholder="Enter your text..."
+          placeholder="Add biography"
           ngModel></textarea>
   </div>
   <button type="submit" class="btn btn-info">ADD</button>
