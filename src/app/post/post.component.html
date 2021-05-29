@@ -1,13 +1,14 @@
 <div class="post">
   <div class="post-info-container">
       <h3>
-          {{element.title}}
+          {{element.name}}
+          <h5>{{element.country}}</h5>
           <div class="button-container">
               <button class="btn btn-info" (click)="editPost()">Edit</button>
               <div class="popup" (click)="confirmPostRemoval()">
-                  <button class="btn btn-danger">Delete</button>
+                  <button class="btn btn-danger">Remove</button>
                   <span class="popuptext myPopup">
-                      Remove the post?
+                      Are you sure?
                       <div class="popup-button-container">
                           <button class="btn btn-info" (click)="deletePost()">YES</button>
                           <button class="btn btn-danger" style="margin-left: 15px">NO</button>
