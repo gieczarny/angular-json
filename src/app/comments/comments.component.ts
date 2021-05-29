@@ -8,7 +8,7 @@ import axios from 'axios';
   styleUrls: ['./comments.component.scss']
 })
 export class CommentsComponent implements OnInit {
-  post: {} = { "title": "Title is loading...", "post": "Text is loading..." };
+  post: {} = { "name": "Name and surname is loading...", "country":"Country is loading", "biography": "Biography is loading..." };
   id: number;
   constructor(private route: ActivatedRoute, private router: Router) {
   }
