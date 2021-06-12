@@ -8,7 +8,7 @@ import axios from 'axios';
 })
 
 export class MyPostsComponent implements OnInit {
-  posts: {}[];
+  posts: [];
   constructor() {
   }
 

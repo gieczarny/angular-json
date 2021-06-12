@@ -1,6 +1,6 @@
 h2 {
   text-align: center;
-  margin-top: 4vh;
+  margin-top: 2vh;
 }
 
 form {
@@ -13,7 +13,7 @@ form {
 
   input,
   textarea {
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
   }
 
   label {
@@ -21,8 +21,12 @@ form {
   }
 
   .btn {
-    margin-left: 65vw;
+    margin-left: 45vw;
     margin-bottom: 5vh;
     padding: 10px 20px;
+  }
+
+  .btn-info {
+    margin: 0vh;
   }
 }

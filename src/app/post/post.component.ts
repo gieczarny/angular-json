@@ -7,6 +7,7 @@ import axios from 'axios';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
+
 export class PostComponent implements OnInit {
   @Input('postElement') element;
   constructor(private router: Router) { }
@@ -14,31 +15,39 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  confirmPostRemoval = () => {
-    console.log(document.getElementsByClassName("myPopup"));
-    let popups = document.getElementsByClassName("myPopup");
-    let popup = Array.prototype.slice.call(popups, 0).reverse()[this.element.id - 1];
-    popup.classList.toggle("show");
+  removeIt = (id?) => {
+    let deletings = document.getElementsByClassName("myDeleting");
+    if (id[0] !== undefined && id[0] !== null) {
+      console.log("DETE", id[0])
+      Array.prototype.forEach.call(deletings, (deleting) => {
+        if (deleting.classList.contains(id[0])) {
+          deleting.classList.toggle("show");
+        }
+      })
+    } else {
+      console.log("DETE")
+      Array.prototype.forEach.call(deletings, (deleting) => {
+        deleting.classList.toggle("show");
+      })
+    }
     return true;
   }
 
-  deletePost = () => {
-    if (this.confirmPostRemoval()) {
+  deletePost = (id: number) => {
+    if (this.removeIt(id)) {
       axios({
         method: 'DELETE',
-        url: 'http://localhost:3000/posts/' + (this.element.id),
+        url: 'http://localhost:3000/posts/' + (id),
         headers: { 'Content-Type': 'application/json' },
       });
-
+      setTimeout(() => { }, 2000);
       if (this.router.url === '/posts') {
-        window.location.reload()
+        window.location.reload();
       } else {
         this.router.navigate(['/posts']);
       }
+    } else {
+      this.router.navigate(['/posts'])
     }
-  }
-
-  editPost = () => {
-    this.router.navigate(['/edit/' + this.element.id]);
   }
 }

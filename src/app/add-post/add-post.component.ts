@@ -22,7 +22,7 @@ export class AddPostComponent implements OnInit {
         .post('http://localhost:3000/posts', {
           "name": form.value.name, "country": form.value.postCountry, "text": form.value.postText
         });
-      this.router.navigate(['/comments']);
+      this.router.navigate(['/posts']);
     }
 
 }

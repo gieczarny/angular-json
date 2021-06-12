@@ -10,9 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { PostComponent } from './post/post.component';
-import { CommentsComponent } from './comments/comments.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
-import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +20,7 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     ErrorPageComponent,
     AddPostComponent,
     PostComponent,
-    CommentsComponent,
-    MyPostsComponent,
-    EditPostComponent
+    MyPostsComponent
   ],
   imports: [
     BrowserModule,
