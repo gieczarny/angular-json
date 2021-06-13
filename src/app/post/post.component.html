@@ -5,14 +5,7 @@
         <h5>{{element.country}}</h5>
           <div class="button-container">
             <div class="deleting" (click)="removeIt([element.id])">
-                <button class="btn btn-danger">X</button>
-                <span class="deletingtext myDeleting {{element.id}}">
-                    Are you sure?
-                    <div class="deleting-button-container">
-                        <button class="btn btn-info" (click)="deletePost([element.id])">YES</button>
-                        <button class="btn btn-danger">NO</button>
-                    </div>
-                </span>
+                <button class="btn btn-danger" (click)="deletePost([element.id])">X</button>
             </div>
         </div>
       </h3>
